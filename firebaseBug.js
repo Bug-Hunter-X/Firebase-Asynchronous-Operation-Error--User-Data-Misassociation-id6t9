@@ -1,0 +1,1 @@
+The issue stems from an asynchronous operation within a Firebase function that isn't properly handled, leading to unexpected behavior.  Specifically, the `admin.auth().createUser()` function completes asynchronously, but the code proceeds without waiting for the result, causing the following user data to be incorrectly associated with the newly created user.
